@@ -1,0 +1,48 @@
+.main-nav{
+
+  .navigation{
+
+    .navigation__wrapper{
+      display: flex;
+      justify-content: center;
+
+      .header__logo{
+        margin: 10px 20px ;
+      }
+      .header__logo2{
+        margin: 23px 36px;
+      }
+      .main-nav__toggle{
+        margin: 24px;
+      }
+    }
+
+    .main-nav__toggle{
+      margin: 24px;
+    }
+  }
+  .open-nav{
+    width: 320px;
+    height: 198px;
+
+    .open-nav__list{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .open-nav__item{
+      display: flex;
+      justify-content: center;
+      padding: 23px 0px ;
+
+      .link{
+        color: black;
+        font-size: 18px;
+        line-height: 10px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+    }
+  }
+}

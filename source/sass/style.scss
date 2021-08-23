@@ -1,1 +1,27 @@
-// Начните писать стили здесь
+//подключил Шрифты
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+// подключил normalize
+@import "./normalize";
+@import "./global";
+
+// подключил Блоки
+@import "./index_scss/advantages.scss";
+@import "./index_scss/example.scss";
+@import "./index_scss/header_inf.scss";
+@import "./index_scss/mode.scss";
+@import "./index_scss/page-main__inf.scss";
+@import "./index_scss/navigation.scss";
+@import "./form_scss/comment.scss";
+@import "./form_scss/contacts.scss";
+@import "./form_scss/form-header.scss";
+@import "./form_scss/questionnaire.scss";
+@import "./form_scss/radio-mode.scss";
+@import "./form_scss/supplement.scss";
+@import "./catalog_scss/catalog-header.scss";
+@import "./catalog_scss/catalog-supplement.scss";
+@import "./catalog_scss/other-product.scss";
+@import "./catalog_scss/production.scss";
+@import "./global_scss/address.scss";
+@import "./global_scss/footer.scss";
+@import "./global_scss/map.scss";

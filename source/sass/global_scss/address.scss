@@ -1,0 +1,29 @@
+.address{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #F2F2F2;
+
+  .address__invitation{
+    font-family: Oswald;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 20px;
+    margin-right: -20px;
+    margin-right: 0px;
+    text-transform: uppercase;
+    color: #111111;
+  }
+
+  .address__location{
+    width: 140px;
+    height: 60px;
+    margin-right: 19px;
+    margin-left: -50px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
