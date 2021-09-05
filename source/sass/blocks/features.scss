@@ -1,0 +1,190 @@
+/* общая обертка */
+
+.features__wrapper {
+  padding-top: 23px;
+  padding-bottom: 48px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 3.9%;
+    padding-top: 43px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 110px -31px;
+    padding: 0;
+  }
+}
+
+/* заголовок */
+
+.features__title {
+  @include fonts(36px, 400);
+  width: 280px;
+  margin: 0 auto 39px;
+  line-height: 40px;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 34px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+/* список лишек */
+
+.features__list {
+  @include list-style;
+  width: 87.5%;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 18px 60px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* лишки */
+
+.features__item {
+  position: relative;
+  margin-bottom: 26px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: $basic-green no-repeat center;
+  }
+
+  &--leaf::before {
+    background-image: url("../img/icons/leaf.svg");
+  }
+
+  &--powder::before {
+    background-image: url("../img/icons/powder.svg");
+  }
+
+  &--dining::before {
+    background-image: url("../img/icons/dining.svg");
+  }
+
+  &--clock::before {
+    background-image: url("../img/icons/clock.svg");
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 151px;
+    padding-bottom: 76px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 38px;
+      width: 80px;
+      height: 80px;
+      background: $basic-green no-repeat center;
+
+      @media (min-width: $desktop-width) {
+        top: 39px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      z-index: 1;
+    }
+
+    &--leaf::before {
+      background-image: url("../img/icons/leaf.svg");
+    }
+
+    &--leaf::after {
+      content: "1";
+      left: 118px;
+    }
+
+    &--powder::before {
+      background-image: url("../img/icons/powder.svg");
+    }
+
+    &--powder::after {
+      content: "2";
+      right: 80px;
+    }
+
+    &--dining::before {
+      background-image: url("../img/icons/dining.svg");
+    }
+
+    &--dining::after {
+      content: "3";
+      left: 113px;
+    }
+
+    &--clock::before {
+      background-image: url("../img/icons/clock.svg");
+    }
+
+    &--clock::after {
+      content: "4";
+      right: 76px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+
+    &--powder::after {
+      right: 0;
+    }
+
+    &--clock::after {
+      right: -3px;
+    }
+  }
+}
+
+/* текст */
+
+.features__text {
+  @include fonts(14px, 400, "Arial");
+  position: relative;
+  margin: 0 0 0 28.5%;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 2;
+  }
+}
+
+.features__text .carry {
+  white-space: nowrap;
+}

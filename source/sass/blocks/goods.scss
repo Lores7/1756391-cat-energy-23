@@ -1,0 +1,81 @@
+/* заголовок в карточке доп товаров */
+
+.goods__title {
+  @include fonts(16px, 400, "Oswald");
+  margin: 0 0 7px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $special-super-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    margin-left: -1px;/*бесит*/
+  }
+}
+
+/* таблица */
+
+.goods__table {
+  width: 100%;
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-bottom: 20px;
+    padding-top: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 293px;
+    margin: 12px 35px 20px auto;
+  }
+}
+
+/* строка */
+
+.goods__line {
+  @include fonts(14px, 400, "Arial");
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.goods__name,
+.goods__description {
+  width: 50%;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.goods__name {
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 44px;
+
+    &--water {
+      padding-right: 55px;
+    }
+  }
+}
+
+.goods__description {
+  text-align: right;
+
+  @media (min-width: $desktop-width) {
+    &--water {
+      padding-right: 10px;
+    }
+  }
+}

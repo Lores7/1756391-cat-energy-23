@@ -1,0 +1,180 @@
+.contacts.contacts--form,
+.contacts.contacts--catalog {
+  background-color: $basic-grey;
+}
+
+.contacts__wrapper {
+  padding-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding: 0;
+  }
+}
+
+/* блок с инфой */
+
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 0 6.25%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 9.3% 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 92px;
+    left: 7.5%;
+    width: 570px;
+    padding: 66px 82px 55px 77px;
+    box-sizing: border-box;
+    background-color: $basic-white;
+    z-index: 1;
+  }
+}
+
+/* заголовок */
+
+.contacts__title {
+  @include fonts(16px, 400, "Oswald");
+  margin-left: -1px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $special-more;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts__title,
+.contacts__text {
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 33%;
+  }
+}
+
+/* адрес */
+
+.contacts__text {
+  @include fonts(14px, 400, "Arial");
+  margin: 0;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 160px;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.contacts__title .carry,
+.contacts__text .carry {
+  display: block;
+  padding-top: 2px;
+  white-space: nowrap;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.contacts__text .carry {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* блок с картой */
+
+.contacts__map-wrapper {
+  position: relative;
+  min-width: 320px;
+  height: 362px;
+  background: url("../img/main/location@1x.png") no-repeat;
+  background-color: $basic-grey;
+  background-position: center 0;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/main/location@2x.png") no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    height: 400px;
+    background: url("../img/main/location-tab@1x.png") no-repeat;
+    background-position: center 0;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/main/location-tab@2x.png") no-repeat;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1440px;
+    background: url("../img/main/location-desk@1x.png") no-repeat;
+    background-position: center 0;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/main/location-desk@2x.png") no-repeat;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 139px;
+    left: 40%;
+    width: 57px;
+    height: 53px;
+    background: url("../img/main/map-pin-mob@1x.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/main/map-pin-mob@2x.png") no-repeat;
+      background-size: 57px 53px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 113px;
+      height: 106px;
+      left: 43.3%;
+      top: 144px;
+      background: url("../img/main/map-pin-tab@1x.png") no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/main/map-pin-tab@2x.png") no-repeat;
+        background-size: 113px 106px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 45%;
+      top: 115px;
+    }
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}

@@ -1,0 +1,62 @@
+.page-main__title {
+  @include fonts(36px, 400);
+  width: 280px;
+  margin: 0 auto 37px;
+  padding-top: 27px;
+  line-height: 36px;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    width: 630px;
+    margin-bottom: 54px;
+    margin-left: 9%;
+    padding-top: 55px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 7.6%;
+    margin-right: 7.6%;
+  }
+}
+
+.page-main__title-catalog {
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    width: 630px;
+    margin-bottom: 60px;
+    margin-left: 3.9%;
+    padding-top: 56px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 7.6%;
+    margin-right: 7.6%;
+  }
+}
+
+.page-main__text {
+  width: 230px;
+  margin-left: 6.25%;
+  margin-bottom: 26px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    width: 330px;
+    margin-left: 9%;
+    margin-bottom: 58px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 7.6%;
+    margin-right: 7.6%;
+  }
+}

@@ -1,0 +1,73 @@
+/* заголовок */
+
+.information__title {
+  @include fonts(16px, 400, "Oswald");
+  width: 80px;
+  margin: 0 0 18px;
+  padding-left: 2px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $special-super-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 130px;
+    margin: 0 auto 14px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+/* таблица */
+
+.information__table {
+  width: 100%;
+  margin-top: -7px;
+  border-spacing: 0;
+
+  @media (min-width: $tablet-width) {
+    border-spacing: 0 14px;
+  }
+}
+
+/* строка */
+
+.information__line {
+  @include fonts(12px, 400, "Arial");
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(16px, 400, "Arial");
+  }
+}
+
+/* наименование */
+
+.information__name,
+.information__description {
+  width: 50%;
+}
+
+.information__name {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 23px;
+      left: 0;
+      width: 200%;
+      height: 1px;
+      background-color: $special-grey;
+    }
+  }
+}
+
+/* описание */
+
+.information__description {
+  text-align: right;
+}

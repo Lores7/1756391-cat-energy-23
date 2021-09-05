@@ -1,0 +1,21 @@
+@mixin list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin fonts($size: 14px, $weight: 400, $name: "Oswald") {
+  font-family: $name, "Arial", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin button {
+  display: block;
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}

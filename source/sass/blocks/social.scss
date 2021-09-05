@@ -1,0 +1,87 @@
+.social__list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  min-height: 63px;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+  padding: 24px 76px 16px 73px;
+  align-items: center;
+  border-top: 1px solid $border-social;
+  border-bottom: 1px solid $border-social;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 3px 0 0 27px;
+    border: none;
+  }
+}
+
+/* лишки соцсетей */
+
+.social__item {
+  margin: 0;
+}
+
+.social__item--vkontakte {
+  margin-right: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 28px;
+  }
+}
+
+.social__item--instagram {
+  margin-right: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 23px;
+  }
+}
+
+/* ссылки */
+
+.social__link-icon-vk {
+  fill: $special-medium-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__link-icon-insta {
+  fill: $special-medium-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__link-icon-fb {
+  fill: $special-medium-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 27px;
+  }
+}
+
+/* действие */
+
+.social__link:hover .social__link-icon-vk,
+.social__link:hover .social__link-icon-insta,
+.social__link:focus .social__link-icon-vk,
+.social__link:focus .social__link-icon-insta,
+.social__link:hover .social__link-icon-fb,
+.social__link:focus .social__link-icon-fb {
+  fill: $basic-green;
+}
+
+.social__link:active .social__link-icon-vk,
+.social__link:active .social__link-icon-insta,
+.social__link:active .social__link-icon-fb {
+  opacity: 0.3;
+}

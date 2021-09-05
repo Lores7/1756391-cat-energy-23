@@ -1,27 +1,28 @@
-//подключил Шрифты
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+// Global
 
-// подключил normalize
-@import "./normalize";
-@import "./global";
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+@import "global/mixins.scss";
 
-// подключил Блоки
-@import "./index_scss/advantages.scss";
-@import "./index_scss/example.scss";
-@import "./index_scss/header_inf.scss";
-@import "./index_scss/mode.scss";
-@import "./index_scss/page-main__inf.scss";
-@import "./index_scss/navigation.scss";
-@import "./form_scss/comment.scss";
-@import "./form_scss/contacts.scss";
-@import "./form_scss/form-header.scss";
-@import "./form_scss/questionnaire.scss";
-@import "./form_scss/radio-mode.scss";
-@import "./form_scss/supplement.scss";
-@import "./catalog_scss/catalog-header.scss";
-@import "./catalog_scss/catalog-supplement.scss";
-@import "./catalog_scss/other-product.scss";
-@import "./catalog_scss/production.scss";
-@import "./global_scss/address.scss";
-@import "./global_scss/footer.scss";
-@import "./global_scss/map.scss";
+// Blocks
+
+@import "blocks/additionally.scss";
+@import "blocks/catalog.scss";
+@import "blocks/cats.scss";
+@import "blocks/contacts.scss";
+@import "blocks/copyright.scss";
+@import "blocks/example.scss";
+@import "blocks/features.scss";
+@import "blocks/form.scss";
+@import "blocks/goods.scss";
+@import "blocks/information.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/products.scss";
+@import "blocks/products-item.scss";
+@import "blocks/promo.scss";
+@import "blocks/social.scss";

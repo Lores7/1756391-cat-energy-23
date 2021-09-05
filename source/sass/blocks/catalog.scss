@@ -1,0 +1,275 @@
+.catalog__wrapper {
+  padding-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.catalog__list {
+  @include list-style;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+/* заголовок */
+
+.catalog__title {
+  @include fonts(24px, 400);
+  margin: 0 0 29px 32.4%;
+  color: $basic-black;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 73px 162px;
+  }
+}
+
+/* лишки */
+
+.catalog__item {
+  position: relative;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 22px;
+  background-color: $basic-grey;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  /* зеленые круги */
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 8%;
+    top: 23px;
+    width: 50px;
+    height: 50px;
+    background: $basic-green no-repeat center;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 3.9%;
+    margin-right: 3.9%;
+    margin-bottom: 30px;
+    padding: 78px 0 58px 7%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 24%;
+      right: 8.6%;
+      left: auto;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    width: 570px;
+    margin-top: 82px;
+    margin-bottom: 71px;
+    padding: 80px 0 58px 52px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &:first-child {
+      margin-left: 110px;
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      margin-right: 110px;
+      margin-bottom: 71px;
+    }
+  }
+
+  /* свгшки */
+  /* худой */
+
+  &-cat-slim {
+    position: absolute;
+    top: 21px;
+    left: 10.3%;
+
+    @media (min-width: $tablet-width) {
+      top: 21.6%;
+      left: auto;
+      right: 13%;
+      width: 140px;
+      height: 192px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 41px;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+  /* мощный */
+
+  &-cat-pro {
+    position: absolute;
+    top: 33px;
+    left: 5%;
+
+    @media (min-width: $tablet-width) {
+      top: 134px;
+      right: 4.1%;
+      left: auto;
+      width: 269px;
+      height: 112px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 67px;
+      left: 33px;
+      width: 134px;
+      height: 56px;
+    }
+  }
+}
+
+.catalog__item-arrow {
+  position: absolute;
+  left: 118%;
+  bottom: 6px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    left: 121%;
+    bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 125%;
+  }
+}
+
+.catalog__item-arrow-long {
+  display: none;
+  position: absolute;
+  left: 118%;
+  bottom: 6px;
+
+  @media (min-width: $tablet-width) {
+    left: 121%;
+    bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 125%;
+  }
+}
+
+/* текст в обеих карточках */
+
+.catalog__text {
+  @include fonts(14px, 400, "Arial");
+  margin: 0 7% 42px;
+  line-height: 18px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 85.7%;
+    height: 1px;
+    left: 7%;
+    bottom: 22%;
+    background-color: $border-social;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 51px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 25px;
+  }
+}
+
+/* текст в похудении */
+
+.catalog__text--slim {
+  @media (min-width: $tablet-width) {
+    width: 58%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 467px;
+  }
+}
+
+/* текст в наборе массы */
+
+.catalog__text--pro {
+  @media (min-width: $tablet-width) {
+    width: 342px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 457px;
+  }
+}
+
+/* ссылка */
+
+.catalog__link {
+  position: relative;
+  margin-left: 7%;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic-black;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .catalog__item-arrow,
+  &:focus .catalog__item-arrow {
+    display: none;
+  }
+
+  &:hover .catalog__item-arrow-long,
+  &:focus .catalog__item-arrow-long {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

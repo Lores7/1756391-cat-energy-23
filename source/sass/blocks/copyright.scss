@@ -1,0 +1,43 @@
+.copyright {
+  min-height: 78px;
+  box-sizing: border-box;
+}
+
+/* ссылка */
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 14px;
+  }
+
+  &:hover .copyright__logo-html,
+  &:focus .copyright__logo-html {
+    fill: $basic-green;
+  }
+
+  &:active .copyright__logo-html {
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo-html {
+  fill: $special-medium-grey;
+}
+
+.copyright__text {
+  @include fonts(16px, 400, "Arial");
+  line-height: 18px;
+  color: $special-dark-grey;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 22px;
+  }
+}

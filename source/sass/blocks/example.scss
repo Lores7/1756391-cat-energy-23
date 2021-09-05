@@ -1,0 +1,242 @@
+.example {
+  @media (min-width: $desktop-width) {
+    background-color: $basic-grey;
+  }
+}
+
+/* обертка общая */
+
+.example__wrapper {
+  padding-top: 27px;
+  padding-bottom: 37px;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+    padding-bottom: 3px;
+    background-color: $basic-white;
+    border-top: 1px solid $border-logo;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 37px 0 0 7.64%;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, $basic-white 0, $basic-white 216px, $basic-grey 192px, $basic-grey 100%);
+    border: none;
+  }
+}
+
+/* обертка с текстом */
+
+.example__story {
+  @media (min-width: $tablet-width) {
+    margin-left: 3.9%;
+    margin-right: 3.9%;
+    padding-bottom: 255px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 43px;
+  }
+}
+
+/* заголовок */
+
+.example__title {
+  @include fonts(36px, 400);
+  width: 280px;
+  margin: 0 auto 33px;
+  line-height: 40px;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin: 0 0 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 145px;
+  }
+}
+
+/* текст */
+
+.example__text {
+  @include fonts(14px, 400, "Arial");
+  margin: 0 6% 25px;
+  width: 87.5%;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 98%;
+    margin: 0 0 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+  }
+}
+
+/* обертка списка определений */
+
+.example__statistics-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: wrap;
+    width: 400px;
+  }
+}
+
+/* список определений */
+
+.example__statistics-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 366px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 49px;
+  }
+}
+
+/* наименование */
+
+.example__number {
+  @include fonts(12px, 400, "Arial");
+  position: absolute;
+  top: 47px;
+  width: 77px;
+  padding: 0 6px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: $basic-grey;
+
+  &:nth-of-type(1) {
+    left: 6%;
+  }
+
+  &:nth-of-type(2) {
+    right: 6%;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 63px;
+    width: 142px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $basic-white;
+
+    &:nth-of-type(1) {
+      left: 1%;
+    }
+
+    &:nth-of-type(2) {
+      right: 1%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-grey;
+  }
+}
+
+/* кол-во */
+
+.example__description {
+  width: 44.3%;
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-black;
+  border: 1px solid $special-grey;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    padding-bottom: 19px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+/* цена */
+
+.example__price {
+  display: flex;
+  justify-content: space-between;
+  width: 188px;
+  margin: 0 auto 40px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 25%;
+    margin: 0;
+    padding-top: 11px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 327px;
+  }
+}
+
+.example__price .carry {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+/* обертка с котами */
+
+.example__slider {
+  @media (min-width: $tablet-width) {
+    height: 375px;
+    padding-top: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin-top: 178px;
+    padding-bottom: 0;
+    background-image: linear-gradient(to right, $basic-grey 0, $basic-grey 343px, $special-cats 343px, $special-cats 100%);
+  }
+}
